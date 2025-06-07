@@ -11,8 +11,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Run console log
-        run: echo "Hello GitHub Actions!"
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v6
 
-      - name: tdjkdhs
-        run: ls
+      - name: tests
+        run: uv run pytest
+
