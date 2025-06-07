@@ -4,7 +4,7 @@
 
 
 
-[example workflow](https://github.com/Yrigin/tp-hse2/actions/workflows/test.yaml/badge.svg)
+![example workflow](https://github.com/Yrigin/tp-hse2/actions/workflows/test.yaml/badge.svg)
 
 
 В данном репозитории содержится код, решающий следующую задачу: сгруппировать файлы по исполнителям, исполнитель находится в названии файла в квадратных скобках. Для файлов без исполнителя, поместить их в папку с названием VA. При этом в названии папки должно быть кол-во треков.
