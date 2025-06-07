@@ -1,0 +1,15 @@
+name: Pytest
+
+on: [push]
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Run console log
+        run: echo "Hello GitHub Actions!"
+
+      - name: tdjkdhs
+        run: ls
