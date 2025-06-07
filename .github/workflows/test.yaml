@@ -39,5 +39,5 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           document: test_result.txt
           message: |
-            аваыва
+            status: ${{ job.status }}
             
