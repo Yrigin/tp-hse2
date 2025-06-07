@@ -30,7 +30,7 @@ def test_get_artist_valid_cases(input_str, expected):
         ("[artist1][artist2]", ValueError),
         ("[first] [second]", ValueError),
         # Неправильные скобки
-        ("[unclosed", None),  # Возвращает None, так как нет закрывающей скобки
+        ("[unclosed", ValueError),  # Возвращает None, так как нет закрывающей скобки
         ("unopened]", None),   # Возвращает None, так как нет открывающей скобки
     ],
 )

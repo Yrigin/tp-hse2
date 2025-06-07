@@ -18,18 +18,6 @@ jobs:
         run: |
 
            uv run pytest -v >> test_result.txt
-          # TEST_OUTPUT=$(uv run pytest -v || true)
-          
-          # echo "test_output<<EOF" >> $GITHUB_OUTPUT
-          # echo "$TEST_OUTPUT" >> $GITHUB_OUTPUT
-          # echo "EOF" >> $GITHUB_OUTPUT
-          
-          # # Check if tests failed
-          # if echo "$TEST_OUTPUT" | grep -q "FAILED"; then
-          #   echo "has_failures=true" >> $GITHUB_OUTPUT
-          # else
-          #   echo "has_failures=false" >> $GITHUB_OUTPUT
-          # fi
 
       - name: send telegram message on push
         if: always()
@@ -39,5 +27,5 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           document: test_result.txt
           message: |
-            status: ${{ job.status }}
+            Status: ${{ job.status }}
             
