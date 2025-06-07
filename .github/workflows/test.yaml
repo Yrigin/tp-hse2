@@ -18,6 +18,7 @@ jobs:
         run: uv run pytest
 
       - name: send telegram message on push
+        if: always()
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
